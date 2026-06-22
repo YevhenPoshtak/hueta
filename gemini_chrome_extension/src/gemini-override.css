@@ -1,0 +1,242 @@
+:root, html, body {
+  background: transparent !important;
+  background-color: transparent !important;
+  color-scheme: normal !important;
+}
+
+*:not(rich-textarea):not(chat-input):not([data-test-id="chat-input-container"]):not(.text-input-field) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body, html, chat-app, main, .app-root, .conversation-container, .page-content,
+div[class*="gradient"], div[class*="fade"], div[class*="bottom"], div[class*="background"], div[class*="bg-"] {
+  background-image: none !important;
+}
+
+chat-app, main, .app-root,
+[class*="input-area"], [class*="input_area"],
+[class*="bottom-bar"], [class*="bottom_bar"],
+[class*="chat-footer"], [class*="footer"],
+[class*="input-container"], [class*="input_container"],
+[class*="input-wrapper"], [class*="input_wrapper"],
+[class*="composer"], [class*="text-area"] {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+}
+
+*::before, *::after {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+chat-input,
+.text-input-field,
+[data-test-id="chat-input-container"] {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+  position: relative !important;
+}
+
+rich-textarea {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-radius: 24px !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  visibility: visible !important;
+  transition: opacity 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+rich-textarea:hover,
+rich-textarea:focus-within {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  opacity: 1 !important;
+}
+
+rich-textarea *,
+chat-input *,
+.text-input-field *,
+[data-test-id="chat-input-container"] * {
+  background-color: transparent !important;
+}
+
+
+[class*="greeting"],
+[class*="welcome"],
+[class*="hero"],
+[data-test-id="greeting"],
+[data-test-id="welcome"],
+[class*="sparkle"],
+.logo,
+.gemini-logo,
+h1 {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+button[aria-label*="menu" i],
+button[aria-label*="меню" i],
+.hamburger-menu {
+  display: none !important;
+}
+
+chat-input button:not([aria-label*="надіслати" i]):not([aria-label*="відправити" i]):not([aria-label*="send" i]):not([aria-label*="submit" i]),
+[data-test-id="chat-input-container"] button:not([aria-label*="надіслати" i]):not([aria-label*="відправити" i]):not([aria-label*="send" i]):not([aria-label*="submit" i]) {
+  display: none !important;
+}
+
+.model-selector,
+[data-test-id="model-selector"],
+[aria-label*="вибір моделі" i],
+[aria-label*="model" i],
+[class*="model-selector"],
+bard-mode-switcher,
+model-switcher {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+[class*="suggestion"],
+[class*="suggestions"],
+[class*="chip"],
+[class*="quick-reply"],
+[data-test-id*="suggestion"],
+[data-test-id*="chip"],
+response-suggestions,
+suggestion-chip,
+[aria-label*="відповісти зараз" i],
+[aria-label*="answer now" i],
+[class*="response-option"],
+[class*="response-suggestion"],
+[class*="conversation-starter"],
+[class*="prompt-suggestion"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body > * > button[class],
+chat-app > * > button,
+[class*="action-button"],
+[class*="scroll-button"],
+[class*="scroll-to-bottom"],
+[class*="fab"],
+[class*="action-fab"],
+[data-test-id*="scroll"],
+[data-test-id*="action"],
+[class*="bottom-bar"] button,
+[class*="bottom_bar"] button {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.05s ease !important;
+}
+
+chat-app button:not(chat-input button):not([aria-label*="надіслати" i]):not([aria-label*="send" i]) {
+  opacity: 0 !important;
+  transition: opacity 0.05s ease !important;
+}
+
+chat-app button:not(chat-input button):not([aria-label*="надіслати" i]):not([aria-label*="send" i]):hover {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+header,
+[class*="header"],
+[aria-label*="новий чат" i],
+[aria-label*="new chat" i],
+[data-test-id*="new-chat"],
+[aria-label*="відповісти" i],
+[aria-label*="reply" i],
+[aria-label*="зупинити" i],
+[aria-label*="stop" i],
+[class*="floating-button"],
+.stop-generating-button {
+  opacity: 0 !important;
+  transition: opacity 0.15s ease !important;
+}
+
+header:hover,
+[class*="header"]:hover,
+[aria-label*="новий чат" i]:hover,
+[aria-label*="new chat" i]:hover,
+[data-test-id*="new-chat"]:hover,
+[aria-label*="відповісти" i]:hover,
+[aria-label*="reply" i]:hover,
+[aria-label*="зупинити" i]:hover,
+[aria-label*="stop" i]:hover,
+[class*="floating-button"]:hover,
+.stop-generating-button:hover {
+  opacity: 1 !important;
+}
+
+message-list,
+.infinite-scroller,
+.conversation-container,
+[class*="message-list"],
+model-message,
+user-message,
+[class*="disclaimer"],
+.legal-text,
+.message-content {
+  opacity: 0 !important;
+  transition: opacity 0.05s ease !important;
+}
+
+message-list:hover,
+.infinite-scroller:hover,
+.conversation-container:hover,
+[class*="message-list"]:hover,
+model-message:hover,
+user-message:hover,
+[class*="disclaimer"]:hover,
+.legal-text:hover,
+.message-content:hover {
+  opacity: 1 !important;
+}
+
+.cdk-overlay-pane,
+.mat-mdc-menu-panel,
+[role="menu"],
+[role="listbox"],
+[role="dialog"] {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+.cdk-overlay-container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.cdk-overlay-pane *,
+.mat-mdc-menu-panel *,
+[role="menu"] *,
+[role="listbox"] *,
+[role="dialog"] * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

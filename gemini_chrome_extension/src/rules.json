@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Resource-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||google.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest", "script", "stylesheet", "image", "font", "other"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Resource-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||googleapis.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest", "script", "stylesheet", "image", "font", "other"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Resource-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||gstatic.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest", "script", "stylesheet", "image", "font", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "Cross-Origin-Resource-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||googleusercontent.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest", "script", "stylesheet", "image", "font", "other"]
+    }
+  }
+]
