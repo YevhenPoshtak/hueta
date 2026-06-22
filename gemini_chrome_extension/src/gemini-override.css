@@ -1,0 +1,393 @@
+:root, html, body {
+  background: transparent !important;
+  background-color: transparent !important;
+  color-scheme: normal !important;
+}
+
+*:not(rich-textarea):not(chat-input):not([data-test-id="chat-input-container"]):not(.text-input-field) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body, html, chat-app, main, .app-root, .conversation-container, .page-content,
+div[class*="gradient"], div[class*="fade"], div[class*="bottom"], div[class*="background"], div[class*="bg-"] {
+  background-image: none !important;
+}
+
+chat-app, main, .app-root,
+[class*="input-area"], [class*="input_area"],
+[class*="bottom-bar"], [class*="bottom_bar"],
+[class*="chat-footer"], [class*="footer"],
+[class*="input-container"], [class*="input_container"],
+[class*="input-wrapper"], [class*="input_wrapper"],
+[class*="composer"], [class*="text-area"] {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+}
+
+*::before, *::after {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+chat-input,
+.text-input-field,
+[data-test-id="chat-input-container"] {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+  position: relative !important;
+}
+
+/* ПОЛЕ ВВОДУ - приховане за замовчуванням, але активне для hover */
+rich-textarea {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  visibility: visible !important; /* КЛЮЧОВЕ: дозволяє hover працювати */
+  transition: opacity 0.2s ease, border-color 0.2s ease, background-color 0.2s ease !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Показуємо при наведенні на батьківський контейнер або на саме поле */
+chat-input:hover rich-textarea,
+rich-textarea:hover,
+rich-textarea:focus-within {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.104) !important;
+  border-color: rgba(255, 255, 255, 0.362) !important;
+}
+
+rich-textarea *,
+chat-input *,
+.text-input-field *,
+[data-test-id="chat-input-container"] * {
+  background-color: transparent !important;
+}
+
+rich-textarea textarea,
+rich-textarea [contenteditable="true"] {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  caret-color: #ffffff !important;
+}
+
+rich-textarea textarea::placeholder,
+rich-textarea [contenteditable="true"]::placeholder {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[class*="greeting"],
+[class*="welcome"],
+[class*="hero"],
+[data-test-id="greeting"],
+[data-test-id="welcome"],
+[class*="sparkle"],
+.logo,
+.gemini-logo,
+h1 {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+button[aria-label*="menu" i],
+button[aria-label*="меню" i],
+.hamburger-menu {
+  display: none !important;
+}
+
+chat-input button:not([aria-label*="надіслати" i]):not([aria-label*="відправити" i]):not([aria-label*="send" i]):not([aria-label*="submit" i]),
+[data-test-id="chat-input-container"] button:not([aria-label*="надіслати" i]):not([aria-label*="відправити" i]):not([aria-label*="send" i]):not([aria-label*="submit" i]) {
+  display: none !important;
+}
+
+.model-selector,
+[data-test-id="model-selector"],
+[aria-label*="вибір моделі" i],
+[aria-label*="model" i],
+[class*="model-selector"],
+bard-mode-switcher,
+model-switcher {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+[class*="suggestion"],
+[class*="suggestions"],
+[class*="chip"],
+[class*="quick-reply"],
+[data-test-id*="suggestion"],
+[data-test-id*="chip"],
+response-suggestions,
+suggestion-chip,
+[aria-label*="відповісти зараз" i],
+[aria-label*="answer now" i],
+[class*="response-option"],
+[class*="response-suggestion"],
+[class*="conversation-starter"],
+[class*="prompt-suggestion"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body > * > button[class],
+chat-app > * > button,
+[class*="action-button"],
+[class*="scroll-button"],
+[class*="scroll-to-bottom"],
+[class*="fab"],
+[class*="action-fab"],
+[data-test-id*="scroll"],
+[data-test-id*="action"],
+[class*="bottom-bar"] button,
+[class*="bottom_bar"] button {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.05s ease !important;
+}
+
+chat-app button:not(chat-input button):not([aria-label*="надіслати" i]):not([aria-label*="send" i]) {
+  opacity: 0 !important;
+  transition: opacity 0.05s ease !important;
+}
+
+chat-app button:not(chat-input button):not([aria-label*="надіслати" i]):not([aria-label*="send" i]):hover {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+header,
+[class*="header"],
+[aria-label*="новий чат" i],
+[aria-label*="new chat" i],
+[data-test-id*="new-chat"],
+[aria-label*="відповісти" i],
+[aria-label*="reply" i],
+[aria-label*="зупинити" i],
+[aria-label*="stop" i],
+[class*="floating-button"],
+.stop-generating-button {
+  opacity: 0 !important;
+  transition: opacity 0.15s ease !important;
+}
+
+header:hover,
+[class*="header"]:hover,
+[aria-label*="новий чат" i]:hover,
+[aria-label*="new chat" i]:hover,
+[data-test-id*="new-chat"]:hover,
+[aria-label*="відповісти" i]:hover,
+[aria-label*="reply" i]:hover,
+[aria-label*="зупинити" i]:hover,
+[aria-label*="stop" i]:hover,
+[class*="floating-button"]:hover,
+.stop-generating-button:hover {
+  opacity: 1 !important;
+}
+
+message-list,
+.infinite-scroller,
+.conversation-container,
+[class*="message-list"],
+model-message,
+user-message,
+[class*="disclaimer"],
+.legal-text,
+.message-content {
+  opacity: 0 !important;
+  transition: opacity 0.05s ease !important;
+}
+
+message-list:hover,
+.infinite-scroller:hover,
+.conversation-container:hover,
+[class*="message-list"]:hover,
+model-message:hover,
+user-message:hover,
+[class*="disclaimer"]:hover,
+.legal-text:hover,
+.message-content:hover {
+  opacity: 1 !important;
+}
+
+.cdk-overlay-pane,
+.mat-mdc-menu-panel,
+[role="menu"],
+[role="listbox"],
+[role="dialog"] {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+.cdk-overlay-container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.cdk-overlay-pane *,
+.mat-mdc-menu-panel *,
+[role="menu"] *,
+[role="listbox"] *,
+[role="dialog"] * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.message-content, 
+model-message, 
+user-message {
+    color: rgba(113, 49, 49, 0.85) !important;
+}
+
+/* Прозорі зображення, що ігнорують курсор миші */
+model-message img,
+user-message img,
+.message-content img,
+img[src^="blob:"],
+[class*="image-container"] {
+    opacity: 0.001 !important; /* 0.2 - дуже прозоре. Збільш до 0.4, якщо занадто невидиме */
+    pointer-events: none !important; /* Вимикає наведення та кліки */
+}
+
+/* Повністю ховає текст підказок (tooltips) при наведенні на кнопки */
+.mat-mdc-tooltip,
+.mdc-tooltip,
+[role="tooltip"],
+[class*="tooltip"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Робить самі іконки дій під повідомленням ледь помітними */
+[class*="message-actions"] button,
+model-message button,
+[aria-label*="мікрофон" i] {
+    opacity: 0.001 !important; /* Майже невидимі */
+}
+
+/* 1. Прибираємо непрозорий фон при додаванні скріншоту/файлу */
+chat-input [class*="attachment"],
+chat-input [class*="preview"],
+chat-input [class*="thumbnail"],
+chat-input [class*="image"],
+chat-input [class*="file"],
+chat-input [class*="gallery"],
+[data-test-id="chat-input-container"] [class*="attachment"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Приховуємо блок попереднього перегляду, щоб плашка не стрибала вверх */
+chat-input [class*="gallery"],
+chat-input [class*="attachment-container"],
+chat-input [class*="image-preview"],
+chat-input file-attachment-gallery {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Повністю ховаємо плашку-попередження знизу екрана */
+[class*="disclaimer"],
+[class*="legal"],
+[class*="notice"],
+[class*="footer-text"],
+[class*="bottom-text"],
+.legal-text {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* 1. Базовий стан плашки (коли мишка НЕ на ній) */
+chat-app rich-textarea {
+    background-color: transparent !important; 
+    border: 1px solid rgba(255, 255, 255, 0.05) !important; /* Дуже-дуже слабка рамочка, щоб ти бачив, де поле */
+    opacity: 0.1 !important; /* 0.1 - майже невидима. Якщо хочеш щоб зникала ПОВНІСТЮ, постав 0 */
+    transition: opacity 0.2s ease, background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* 1. Робимо фон при наведенні МЕНШ яскравим, щоб текст не губився на ньому */
+chat-app chat-input:hover rich-textarea,
+chat-app rich-textarea:hover,
+chat-app rich-textarea:focus-within {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.03) !important; /* Майже повністю прозорий фон замість білястого */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Легка рамочка, щоб бачити межі */
+}
+
+/* 2. Залізно фіксуємо колір тексту в полі вводу на всіх етапах (навіть при фокусі/наведенні) */
+chat-app rich-textarea textarea,
+chat-app rich-textarea [contenteditable="true"],
+chat-app chat-input:hover rich-textarea textarea,
+chat-app chat-input:hover rich-textarea [contenteditable="true"],
+chat-app rich-textarea:focus-within textarea,
+chat-app rich-textarea:focus-within [contenteditable="true"] {
+    color: rgba(255, 255, 255, 0.95) !important; /* Стабільно яскравий білий текст */
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.95) !important; /* Перебиваємо приховані стилі браузера */
+    text-shadow: none !important;
+    transition: none !important; /* Вимикаємо поступове затемнення тексту */
+}
+
+/* 1. Перебиваємо системні змінні кольору Гугла на рівні всього сайту */
+:root, body, chat-app {
+    --gem-sys-color--on-surface: rgba(255, 255, 255, 0.95) !important;
+    --gem-sys-color--on-surface-variant: rgba(255, 255, 255, 0.95) !important;
+    --mdc-theme-text-primary-on-background: rgba(255, 255, 255, 0.95) !important;
+    --mdc-theme-text-secondary-on-background: rgba(255, 255, 255, 0.95) !important;
+    --mdc-typography-body1-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* 2. Ядерний селектор: перефарбовуємо БУДЬ-ЯКИЙ елемент всередині повідомлень */
+model-message *,
+user-message *,
+.message-content * {
+    color: rgba(169, 62, 62, 0.95) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* 3. Рятуємо блоки з кодом (щоб не зробити їх повністю білими) */
+model-message pre,
+model-message pre *,
+model-message code,
+model-message code *,
+model-message span[class*="token"],
+user-message pre,
+user-message pre *,
+user-message code,
+user-message code * {
+    color: inherit !important;
+    -webkit-text-fill-color: initial !important;
+}
